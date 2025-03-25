@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "iostream": "cpp"
+    }
+    "terminal.integrated.env.windows": {
+        "GIT_ASKPASS": "C:\\Program Files\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+        "VSCODE_GIT_ASKPASS_NODE": "C:\\Program Files\\Microsoft VS Code\\Code.exe",
+        "VSCODE_GIT_ASKPASS_MAIN": "C:\\Program Files\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js"
+      }
+}
