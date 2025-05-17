@@ -1,12 +1,1 @@
-Underflow
-Stack Underflow
-10 has been pushed to stack
-20 has been pushed to stack
-30 has been pushed to stack
-30 30 30 
-Top element is: 30
-Popped: 30
-20 20 
-Popped: 20
-Popped: 10
-Stack Underflow
+ABC*DEF^/G*-H*+
