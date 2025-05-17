@@ -1,0 +1,12 @@
+10 has pushed into stack
+20 has pushed into stack
+20
+Popped: 20
+10
+30 has pushed into stack
+40 has pushed into stack
+50 has pushed into stack
+60 has pushed into stack
+70 has pushed into stack
+Stack from the top: 
+70 60 50 40 30 10 
