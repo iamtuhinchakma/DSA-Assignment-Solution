@@ -1,1 +1,2 @@
-ABC*DEF^/G*-H*+
+Enter the postfix expression: 
+Result: 37
