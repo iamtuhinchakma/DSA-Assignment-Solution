@@ -1,0 +1,4 @@
+Original Data: 
+10 5 280 225 38 89 
+Data after sorted: 
+5 10 38 89 225 280 

@@ -1,0 +1,4 @@
+Original sorted array: 
+2 5 10 12 24 25 
+Array after deletion: 
+2 5 10 24 25 
