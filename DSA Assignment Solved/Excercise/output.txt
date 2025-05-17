@@ -1,4 +1,7 @@
 First Original List: 
-2 4 6 8 10 12 
-List size: 6
-Middle elements are: 6 and 8
+2 4 6 8 10 
+Size of the list: 5
+First halves: 
+2 4 6 
+Second halves: 
+8 10 
