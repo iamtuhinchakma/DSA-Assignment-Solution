@@ -58,6 +58,56 @@ void printIn2D(Node* root, int space){
     cout << root->data << endl;
     printIn2D(root->leftChild, space);
 }
+
+void preorderTraversal(Node* root){
+    if(root == NULL) return;
+    cout << root->data << ' ';
+    preorderTraversal(root->leftChild);
+    preorderTraversal(root->rightChild);
+}
+
+void inorderTraversal(Node* root){
+    if(root == NULL) return;
+    inorderTraversal(root->leftChild);
+    cout << root->data << " ";
+    inorderTraversal(root->rightChild);
+}
+
+void postorderTraversal(Node* root){
+    if(root == NULL) return;
+    postorderTraversal(root->leftChild);
+    postorderTraversal(root->rightChild);
+    cout << root->data << " ";
+}
+
+Node* searchAndInsert(Node* root, int item){
+    Node* current = root;
+    while(current != NULL){
+        if(current->data == item){
+            cout << "Value " << item << " has been found\n";
+            return root;
+        }
+        else if(current->data > item){
+            if(current->leftChild != NULL){
+                current = current->leftChild;
+            } else {
+                current->leftChild = createNode(item);
+                cout << "Inserted\n";
+                return root;
+            }
+        } else {
+            if(current->rightChild != NULL){
+                current = current->rightChild;
+            } else {
+                current->rightChild = createNode(item);
+                cout << "Successfully inserted item\n";
+                return root;
+            }
+        }
+    }
+    cout << "Tree was empty and successfuly inserted the item\n";
+    return createNode(item);
+} 
 int main() {
     Node* root = NULL;
     int n;
@@ -76,6 +126,24 @@ int main() {
     cout << "\n\nTree in 2D view:\n";
     printIn2D(root, 5);
 
+    cout<<endl<<"inorder: "<<endl;
+    inorderTraversal(root);
+
+    cout << endl;
+    cout << endl;
+    int searchVal;
+    cout << "\nEnter a value to search (and insert if not found): ";
+    cin >> searchVal;
+    root = searchAndInsert(root, searchVal);
+
+    cout << endl;
+    cout << endl;
+    print(root);
+
+    cout << endl;
+    cout << endl;
+
+    printIn2D(root, 5);
     return 0;
 }
 
