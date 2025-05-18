@@ -24,6 +24,32 @@ void insert(int item){
         }
     }
 }
+void deleteRoot(){
+    if(n == 0){
+        cout << "Heap is empty\n";
+        return;
+    }
+    heap[1] = heap[n];
+    n--;
+    int index = 1;
+    while(index <= n){
+        int leftChild = 2 * index;
+        int rightChild = 2 * index + 1;
+        int largest = index;
+    
+        if(leftChild <= n && heap[leftChild] > heap[largest])
+            largest = leftChild;
+        if(rightChild <= n && heap[rightChild] > heap[largest])
+            largest = rightChild;
+    
+        if(largest != index){
+            swap(heap[index], heap[largest]);
+            index = largest;
+        } else {
+            break;
+        }
+    } 
+}
 
 void printHeap(){
     for(int i = 1; i <= n; i++) cout << heap[i] << ' ';
@@ -58,7 +84,7 @@ int main() {
     // insert(58);
     // insert(31);
 
-    
+
     int n;
     cout << "Enter number of elements: ";
     cin >> n;
@@ -76,5 +102,13 @@ int main() {
     cout << "\nHeap as 2D tree view:\n";
     print_2D_heap(1, 0); // visual tree
 
+    cout << endl;
+    cout << endl;
+        // Delete root (max element)
+        cout << "\nDeleting root...\n";
+        deleteRoot();
+    
+        cout << "Heap after deleting root:\n";
+        printHeap();
     return 0;
 }
