@@ -7,7 +7,7 @@ int tree[MAX];
 // Initialize array to 0 (0 means empty)
 void initialize(){
     for(int i = 0; i < MAX; i++){
-        tree[i] == 0;
+        tree[i] = 0;
     }
 }
 void insert(int data){
