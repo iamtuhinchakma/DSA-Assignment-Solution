@@ -1,4 +1,0 @@
-10 25 2 3 4 
-Preorder: 
-Inorder: 
-Postorder: 

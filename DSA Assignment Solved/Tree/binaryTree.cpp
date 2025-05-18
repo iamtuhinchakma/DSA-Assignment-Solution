@@ -22,7 +22,7 @@ void preorder(int index) {
     if (index >= MAX || tree[index] == 0) return;
 
     cout << tree[index] << " ";        // Visit root
-    preorder(2 * index);              // Left subtree
+    preorder(2 * index);            // Left subtree
     preorder(2 * index + 1);          // Right subtree
 }
 
