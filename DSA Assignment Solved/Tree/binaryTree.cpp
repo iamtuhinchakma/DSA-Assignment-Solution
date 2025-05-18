@@ -18,6 +18,28 @@ void insert(int data){
         }
     }
 }
+void preorder(int index) {
+    if (index >= MAX || tree[index] == 0) return;
+
+    cout << tree[index] << " ";        // Visit root
+    preorder(2 * index);              // Left subtree
+    preorder(2 * index + 1);          // Right subtree
+}
+
+void inorder(int index) {
+    if (index >= MAX || tree[index] == 0) return;
+    inorder(2 * index);               // Left subtree
+    cout << tree[index] << " ";        // Visit root
+    inorder(2 * index + 1);           // Right subtree
+}
+
+void postorder(int index) {
+    if (index >= MAX || tree[index] == 0) return;
+    postorder(2 * index);             // Left subtree
+    postorder(2 * index + 1);         // Right subtree
+    cout << tree[index] << " ";        // Visit root
+}
+
 
 int main(){
     #ifndef ONLINE_JUDGE
@@ -45,5 +67,16 @@ int main(){
     }
     cout << endl;
 
+    cout << "Preorder: ";
+    preorder(1);
+    cout << endl;
+
+    cout << "Inorder: ";
+    inorder(1);
+    cout << endl;
+
+    cout << "Postorder: ";
+    postorder(1);
+    cout << endl;
     return 0;
 }
