@@ -1,61 +1,33 @@
-// LinkedList operation: inserting at sorted list
 #include <bits/stdc++.h>
 using namespace std;
 struct Node{
     int data;
     Node* next;
 };
-Node* createNode(int info){
+Node* createNode(int data){
     Node* newNode = (Node*) malloc(sizeof(Node));
-    newNode->data = info;
+    newNode->data = data;
     newNode->next = NULL;
-    return newNode;
 }
 
-void printList(Node* start){
-    Node* ptr = start;
+void print(Node* head){
+    Node* ptr = head;
     while(ptr != NULL){
         cout << ptr->data << ' ';
         ptr = ptr->next;
     }
     cout << endl;
 }
-
-//InsertintoSortedList
-Node* insertInSortedList(Node* &head, int val){
-    Node* newNode = createNode(val);
-
-    // Case 1: Insert at head or into empty list
-    if (head == NULL || val < head->data) {
-        newNode->next = head;
-        head = newNode;
-        return newNode;
-    }
-
-    Node* ptr = head;
-    while(ptr->next != NULL && ptr->next->data < val){
-        ptr = ptr->next;
-    }
-
-    newNode->next = ptr->next;
-    ptr->next = newNode;
-    return newNode;
-}
-
-//Reverse print
 void reversePrint(Node* head){
     if(head == NULL) return;
     reversePrint(head->next);
     cout << head->data << ' ';
 }
-
 int main(){
     #ifndef ONLINE_JUDGE
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     #endif
-
-
 
 
     Node* head = NULL;
@@ -74,14 +46,7 @@ int main(){
         }
     }
 
-    printList(head);
-
-    int item;
-    cin >> item;
-    insertInSortedList(head, item);
-    cout << "After insertion: \n";
-    printList(head);
-
+    print(head);
     reversePrint(head);
     return 0;
 }

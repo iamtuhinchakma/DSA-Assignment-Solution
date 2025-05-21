@@ -1,0 +1,2 @@
+Enter the postfix expression: Stack Underflow
+Result: -1

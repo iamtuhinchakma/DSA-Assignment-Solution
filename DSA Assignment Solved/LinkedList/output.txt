@@ -1,6 +1,4 @@
-First Original List: 
 2 8 12 16 18 
-Second Original List: 
-25 32 44 49 225 777 
-After merging: 
-2 8 12 16 18 25 32 44 49 225 777 
+After insertion: 
+2 8 12 16 18 19 
+19 18 16 12 8 2 

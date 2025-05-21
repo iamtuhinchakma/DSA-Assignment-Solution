@@ -1,4 +1,4 @@
-// LinkedList operation: inserting at sorted list
+// LinkedList operation: Deletion in linked list
 #include <bits/stdc++.h>
 using namespace std;
 struct Node{
